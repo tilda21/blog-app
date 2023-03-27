@@ -9,7 +9,7 @@ import {
 
 const router = express.Router();
 
-// http://localhost:8080/posts/ istekleri burada yapılacak
+// http://localhost:8080/posts/
 // GET, POST, DELETE, PUT, PATCH
 
 router.get("/", getPosts);

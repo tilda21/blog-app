@@ -5,6 +5,7 @@ export const fetchPosts = () => async dispatch => {
   try {
     dispatch({ type: types.FETCH_POSTS_REQUEST });
     const { data } = await api.fetchPosts();
+    console.log('fetchPosts data: ', data);
     dispatch({ type: types.FETCH_POSTS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: types.FETCH_POSTS_FAIL, payload: error.message });

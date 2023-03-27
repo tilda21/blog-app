@@ -1,6 +1,7 @@
 import * as React from 'react';
+import DALL_E_van_gogh_MR_ocean_theme from './DALL·E_van_gogh_MR_ocean_theme.png';
 
-function SvgLogo(props) {
+export function SvgLogo(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={64} height={64} {...props}>
       <path fill="#faefde" d="M32 18.55A18 18 0 1129.41 40" />
@@ -20,4 +21,12 @@ function SvgLogo(props) {
   );
 }
 
-export default SvgLogo;
+export function Logo() {
+  return (
+    <img
+      src={DALL_E_van_gogh_MR_ocean_theme}
+      alt="Logo built using DALL·E"
+      style={{ width: 42, height: 42, borderRadius: '25%' }}
+    ></img>
+  );
+}

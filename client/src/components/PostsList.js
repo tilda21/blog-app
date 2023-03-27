@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Post from './Post';
 import { fetchPosts } from '../redux/actions/post';
 import Loader from './Loader';
-import { useColorModeValue, Box, Wrap, Flex } from '@chakra-ui/react';
+import { useColorModeValue, Button, Box, Wrap, Flex, Link, Stack } from '@chakra-ui/react';
 
 const PostsList = () => {
   const listPost = useSelector(state => state.posts);
@@ -15,6 +15,10 @@ const PostsList = () => {
   useEffect(() => {
     dispatch(fetchPosts());
   }, [dispatch]);
+
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
 
   return (
     <Flex
@@ -27,7 +31,6 @@ const PostsList = () => {
       minH="100vh"
     >
       <Wrap spacing="30px" justify="center">
-        {error && <p>{error}</p>}
         {loading ? (
           <Loader />
         ) : posts?.length > 0 ? (
@@ -45,7 +48,11 @@ const PostsList = () => {
             </Box>
           ))
         ) : (
-          'Blog not found!'
+          <Stack direction={'column'} spacing={3} align={'center'} alignSelf={'center'} position={'relative'}>
+            <h2>The Blog is still empty!</h2>
+            <br/>
+            <h3>Click in the above "New Post" button and start making magic</h3>
+          </Stack>
         )}
       </Wrap>
     </Flex>

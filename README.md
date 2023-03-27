@@ -1,10 +1,7 @@
 <div align="center">
-  <h3 text-transform="underline"> MERN stack (MongoDB, Express, React, Node.js) blog app with Chakra UI and Redux. </h3>
+  <h3 text-transform="underline"> MERN Stack Blog App with Chakra UI and Redux. </h3>
+  <h4> This app is based on this project <a href="https://github.com/olcaneristi/mern-blog-app" target="_blank">mern-blog-app</a></h3>
 </div>
-
-<p align="center">
- This project was my first experience of MERN stack and Chakra UI. I learned a lot while doing it and had a lot of fun. I learned about Express, Node.js and MongoDB. I'll build better projects as soon as possible.
-</p>
 
 <p align="center">
   Hosted with <a href="https://vercel.com/" target="_blank">Vercel</a> & <a href="https://www.heroku.com/" target="_blank">Heroku</a>

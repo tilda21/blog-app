@@ -20,7 +20,7 @@ import { FormControl, FormLabel } from '@chakra-ui/form-control';
 
 import { createPost } from '../redux/actions/post';
 
-const categories = ['Frontend', 'Backend', 'Mobile', 'React', 'Vue', 'JavaScript', 'Fun', 'Gaming'];
+const categories = ['Travel', 'Friends', 'Nature', 'Sports', 'Food', 'Fun', 'Happy', 'Sad'];
 
 const AddPostForm = ({ isOpen, onClose }) => {
   const [file, setFile] = useState(null);
@@ -83,8 +83,8 @@ const AddPostForm = ({ isOpen, onClose }) => {
               />
               {errors.subtitle && <p className="validation__error">{errors.subtitle.message}</p>}
             </FormControl>
-			
-			<FormControl isInvalid={errors.author} minH={'100px'}>
+
+            <FormControl isInvalid={errors.author} minH={'100px'}>
               <FormLabel>Author</FormLabel>
               <Input
                 id="author"

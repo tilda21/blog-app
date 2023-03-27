@@ -73,8 +73,8 @@ const EditPostForm = ({ post, closeEditMode }) => {
               />
               {errors.subtitle && <p className="validation__error">{errors.subtitle.message}</p>}
             </FormControl>
-			
-			<FormControl isInvalid={errors.author} minH={'100px'}>
+
+            <FormControl isInvalid={errors.author} minH={'100px'}>
               <FormLabel>Author</FormLabel>
               <Input
                 id="author"

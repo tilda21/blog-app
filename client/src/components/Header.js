@@ -1,6 +1,6 @@
 import React from 'react';
 import { chakra, useColorModeValue, Flex, Button, Link } from '@chakra-ui/react';
-import Logo from '../images/Logo';
+import { Logo } from '../images/Logo';
 import AddPostForm from './AddPostForm';
 import { useDisclosure } from '@chakra-ui/hooks';
 
@@ -34,7 +34,7 @@ const Header = () => {
             >
               Posts
             </Link>
-            <Button ml="10" colorScheme="teal" size="sm" onClick={onOpen}>
+            <Button ml="10" color={useColorModeValue('gray.800', 'white')} bg={'#ce47e7'} size="sm" onClick={onOpen}>
               New Post
             </Button>
           </Flex>

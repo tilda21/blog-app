@@ -16,26 +16,28 @@ export default function CallToActionWithAnnotation() {
     <>
       <Container maxW={'3xl'} minH="90vh" display="flex" alignItems="center" justifyContent="center">
         <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 14 }} py={{ base: 20, md: 36 }}>
-          <Heading fontWeight={600} fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }} lineHeight={'110%'}>
-            MERN stack blog app with <br />
-            <Text as={'span'} color={'green.400'} bgGradient="linear(to-r, #30CFD0 0%, #ce47e7 100%)" bgClip="text">
-              Chakra UI
-            </Text>
+          <Heading
+            fontWeight={600}
+            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+            lineHeight={'110%'}
+            color={'green.400'}
+            bgGradient="linear(to-r, #61C0EB 0%, #2EACFC 25%, #0177E9 50%, #ce47e7 75%, #ce47e7 100%)"
+            bgClip="text"
+          >
+            Blog App <br />
           </Heading>
           <Text color={'gray.500'}>
-            That's my first experience with MERN stack and Chakra UI. I had so much fun doing it. <br /> I hope you like
-            it too.
+            This MERN stack app was built as an example for the Professional Certificate in Coding, Women's Cohort.
           </Text>
           <Stack direction={'column'} spacing={3} align={'center'} alignSelf={'center'} position={'relative'}>
             <Button
               as={Link}
               href={'/posts'}
-              colorScheme={'green'}
-              bg={'green.500'}
+              bg={'#54C0FD'}
               rounded={'full'}
               px={6}
               _hover={{
-                bg: 'green.600',
+                bg: '#0177E',
               }}
               color={'gray.100'}
             >

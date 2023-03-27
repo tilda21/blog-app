@@ -114,7 +114,7 @@ const PostDetails = () => {
                       alt={currentPost?.tag}
                     />
                     <figcaption style={{ textAlign: 'center', color: '#afacac', fontSize: '0.9rem' }}>
-                      Photo by Lopez Robin on Unsplash
+                      Photo by Matilde Ribeiro
                     </figcaption>
                   </figure>
                   <Text mt={4} fontSize="lg" color={('gray.400', 'gray.300')}>

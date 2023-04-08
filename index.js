@@ -2,7 +2,12 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from 'url';
 import postRoutes from "./routes/posts.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 dotenv.config();
@@ -42,8 +47,6 @@ mongoose
   });
 
 // Accessing the path module
-const path = require("path");
-
 // Step 1:
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 // Step 2:

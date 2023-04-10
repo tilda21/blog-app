@@ -25,7 +25,7 @@ const categories = ['Travel', 'Friends', 'Nature', 'Sports', 'Food', 'Fun', 'Hap
 const AddPostForm = ({ isOpen, onClose }) => {
   const [file, setFile] = useState(null);
 
-  const { register, errors, control, handleSubmit } = useForm();
+  const { errors, control, handleSubmit } = useForm();
 
   const dispatch = useDispatch();
 
@@ -52,51 +52,21 @@ const AddPostForm = ({ isOpen, onClose }) => {
         <ModalCloseButton />
         <ModalBody pb={6}>
           <form noValidate autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
-            <FormControl isInvalid={errors?.title} minH={'100px'}>
+            <FormControl isInvalid={Boolean(errors?.title)} minH={'100px'}>
               <FormLabel>Title</FormLabel>
-              <Input
-                id="title"
-                label="Title"
-                name="title"
-                ref={register({
-                  required: {
-                    value: true,
-                    message: 'This field is required.',
-                  },
-                })}
-              />
+              <Input id="title" label="Title" name="title" />
               {errors?.title && <p className="validation__error">{errors?.title.message}</p>}
             </FormControl>
 
-            <FormControl isInvalid={errors?.subtitle} minH={'100px'}>
+            <FormControl isInvalid={Boolean(errors?.subtitle)} minH={'100px'}>
               <FormLabel>Subtitle</FormLabel>
-              <Input
-                id="subtitle"
-                label="Subtitle"
-                name="subtitle"
-                ref={register({
-                  required: {
-                    value: true,
-                    message: 'This field is required.',
-                  },
-                })}
-              />
+              <Input id="subtitle" label="Subtitle" name="subtitle" />
               {errors?.subtitle && <p className="validation__error">{errors?.subtitle.message}</p>}
             </FormControl>
 
-            <FormControl isInvalid={errors?.author} minH={'100px'}>
+            <FormControl isInvalid={Boolean(errors?.author)} minH={'100px'}>
               <FormLabel>Author</FormLabel>
-              <Input
-                id="author"
-                label="Author"
-                name="author"
-                ref={register({
-                  required: {
-                    value: true,
-                    message: 'This field is required.',
-                  },
-                })}
-              />
+              <Input id="author" label="Author" name="author" />
               {errors?.author && <p className="validation__error">{errors?.author.message}</p>}
             </FormControl>
 
@@ -117,23 +87,9 @@ const AddPostForm = ({ isOpen, onClose }) => {
                 defaultValue={categories[0]}
               />
             </FormControl>
-            <FormControl isInvalid={errors?.content} minH={'100px'}>
+            <FormControl isInvalid={Boolean(errors?.content)} minH={'100px'}>
               <FormLabel>Content</FormLabel>
-              <Textarea
-                id="content"
-                label="İçerik"
-                name="content"
-                ref={register({
-                  required: {
-                    value: true,
-                    message: 'This field is required.',
-                  },
-                  minLength: {
-                    message: 'Content must contain at least 50 characters or more.',
-                    value: 50,
-                  },
-                })}
-              />
+              <Textarea id="content" label="Content" name="content" />
               {errors?.content && <p className="validation__error">{errors?.content?.message}</p>}
             </FormControl>
 

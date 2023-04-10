@@ -52,11 +52,11 @@ const AddPostForm = ({ isOpen, onClose }) => {
         <ModalCloseButton />
         <ModalBody pb={6}>
           <form noValidate autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
-            <FormControl isInvalid={errors.title} minH={'100px'}>
+            <FormControl isInvalid={errors?.title} minH={'100px'}>
               <FormLabel>Title</FormLabel>
               <Input
                 id="title"
-                label="Başlık"
+                label="Title"
                 name="title"
                 ref={register({
                   required: {
@@ -65,14 +65,14 @@ const AddPostForm = ({ isOpen, onClose }) => {
                   },
                 })}
               />
-              {errors.title && <p className="validation__error">{errors.title.message}</p>}
+              {errors?.title && <p className="validation__error">{errors?.title.message}</p>}
             </FormControl>
 
-            <FormControl isInvalid={errors.subtitle} minH={'100px'}>
+            <FormControl isInvalid={errors?.subtitle} minH={'100px'}>
               <FormLabel>Subtitle</FormLabel>
               <Input
                 id="subtitle"
-                label="Alt Başlık"
+                label="Subtitle"
                 name="subtitle"
                 ref={register({
                   required: {
@@ -81,10 +81,10 @@ const AddPostForm = ({ isOpen, onClose }) => {
                   },
                 })}
               />
-              {errors.subtitle && <p className="validation__error">{errors.subtitle.message}</p>}
+              {errors?.subtitle && <p className="validation__error">{errors?.subtitle.message}</p>}
             </FormControl>
 
-            <FormControl isInvalid={errors.author} minH={'100px'}>
+            <FormControl isInvalid={errors?.author} minH={'100px'}>
               <FormLabel>Author</FormLabel>
               <Input
                 id="author"
@@ -97,7 +97,7 @@ const AddPostForm = ({ isOpen, onClose }) => {
                   },
                 })}
               />
-              {errors.author && <p className="validation__error">{errors.author.message}</p>}
+              {errors?.author && <p className="validation__error">{errors?.author.message}</p>}
             </FormControl>
 
             <FormControl minH={'100px'}>
@@ -117,7 +117,7 @@ const AddPostForm = ({ isOpen, onClose }) => {
                 defaultValue={categories[0]}
               />
             </FormControl>
-            <FormControl isInvalid={errors.content} minH={'100px'}>
+            <FormControl isInvalid={errors?.content} minH={'100px'}>
               <FormLabel>Content</FormLabel>
               <Textarea
                 id="content"
@@ -134,7 +134,7 @@ const AddPostForm = ({ isOpen, onClose }) => {
                   },
                 })}
               />
-              {errors.content && <p className="validation__error">{errors.content.message}</p>}
+              {errors?.content && <p className="validation__error">{errors?.content?.message}</p>}
             </FormControl>
 
             <FormControl mt={4}>

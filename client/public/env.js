@@ -1,3 +1,3 @@
 window.env = {
-  "SERVER_ENDPOINT": "http://localhost:8080"
+  SERVER_ENDPOINT: 'http://localhost:8000',
 };

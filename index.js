@@ -21,16 +21,10 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
-  res.json({
-    author: "Ogulcan",
-    message: "Hello, MERN is awesome!",
-  });
-});
+app.use("/api/posts", postRoutes);
 
-app.use("/posts", postRoutes);
-
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
+console.log(`Server will start...`)
 
 mongoose
   .connect(process.env.CONNECTION_URL, {
